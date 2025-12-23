@@ -67,7 +67,7 @@ function App() {
           <Route element={<SubCategory/>} path="/subcategory"/>
           <Route element={<DisplayAllSubCategory/>} path="/displayallsubcategory"/>
           <Route element={<Company/>} path="/company"/>
-          <Route element={<HomePage/>} path="/homepage"/>
+          <Route element={<HomePage/>} path="/"/>
           <Route element={<DisplayAllCompany/>} path="/DisplayAllCompany"/>
           <Route element={<RequiredSkills/>} path="/requiredskills"/>
           <Route element={<DisplayAllskills/>} path="/DisplayAllskills"/>
