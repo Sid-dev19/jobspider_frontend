@@ -78,7 +78,7 @@ export default function SearchBarComponent() {
         <MainSearch/>
       </div>:<SingleShrinkSearchComponent/>}
         <div >
-        <img src={homepage} style={{ width:matches?'':'200px', marginLeft:matches?'70%':'30%',marginBottom:matches?'':60, marginTop:matches?-391:-500}} />
+        <img src={homepage} style={{ width:matches?'':'200px', marginLeft:matches?'70%':'30%',marginBottom:matches?'':20, marginTop:matches?-391:-500}} />
       </div>
       {/* <div style={{ marginBottom: '10px', marginTop: "100px" }}>
          <UpdateScroll items={update} />

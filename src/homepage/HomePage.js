@@ -28,10 +28,10 @@ export default function CreateAccountFirst() {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"))
 
   const update = [
-    { userimage: "radha.jpg", message: "Radha got job 6 hours ago" },
+    { userimage: "sid.jpg", message: "Siddharth got job 6 hours ago" },
     { userimage: "mayank.webp", message: "Vidhi Sharma 6 hours ago" },
-    { userimage: "prachi.webp", message: "Kuldeep Singh got job 2 hours ago" },
-    { userimage: "rahul.jpg", message: "Aman got job 4 hours ago" },
+    { userimage: "Prachi.webp", message: "Kuldeep Singh got job 2 hours ago" },
+    { userimage: "Rahul.jpg", message: "rahul got job 4 hours ago" },
   ]
 
   const color = ["#e67e22", "#ffeaa7", "#fd79a8", "#74b9ff", "#2ecc71"]

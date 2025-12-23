@@ -4,28 +4,32 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import RecentUpdateComponent from "./RecentUpdateComponent";
 
-export default function UpdateScroll({ items }) {
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+
+export default function UpdateScroll({ items = [] }) {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const sref = useRef();
 
   const settings = {
     dots: false,
     infinite: true,
     speed: 4000,
-    slidesToShow: 4,
-    slidesToScroll: 2,
+    slidesToShow: isMobile ? 1 : 4,   // ✅ RESPONSIVE
+    slidesToScroll: isMobile ? 1 : 2, // ✅ RESPONSIVE
     arrows: false,
     centerMode: true,
-    centerPadding: "0px",
+    centerPadding: isMobile ? "20px" : "0px",
     autoplay: true,
     autoplaySpeed: 0,
     cssEase: "linear",
   };
 
-  const sref = useRef();
-
   const showUpdate = () =>
     items.map((item, index) => (
       <div key={index}>
-        {/* ✅ YE WRAPPER GAP CREATE KARTA HAI */}
+        {/* GAP BETWEEN CARDS */}
         <div style={{ padding: "0 10px" }}>
           <RecentUpdateComponent item={item} />
         </div>
@@ -33,7 +37,7 @@ export default function UpdateScroll({ items }) {
     ));
 
   return (
-    <div style={{ width: "100%" }}>
+    <div style={{ width: "100%", overflow: "hidden" }}>
       <Slider ref={sref} {...settings}>
         {showUpdate()}
       </Slider>
